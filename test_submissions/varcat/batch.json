@@ -2,12 +2,12 @@
   "oncogenicitySubmission": [
     {
       "recordStatus": "novel",
-      "localID": "varcat.variant:5",
-      "localKey": "varcat.overall_assessment:3",
+      "localID": "varcat.variant:7",
+      "localKey": "varcat.overall_assessment:4",
       "oncogenicityClassification": {
         "oncogenicityClassificationDescription": "Oncogenic",
         "dateLastEvaluated": "2024-04-01",
-        "comment": "This variant is classified oncogenic in Schwannoma. The total score for this classification is 3 and the evidence supporting this classification are as follows. Functional studies support an oncogenic effect for this variant (ClinGen/CGC/VICC 2022: OS2). This variant has not been identified in control populations (or at an extremely low minor allele frequency) within gnomAD, a large-scale population database (ClinGen/CGC/VICC 2022: OP4)."
+        "comment": "This variant is classified oncogenic in Diffuse Midline Glioma. The total score for this classification is 10 and the evidence supporting this classification are as follows. This specific variant Q61K has been documented as a hotspot in minimally 10 samples, and variation occurring within the same amino acid position has been identified in minimally 50 samples in the cancerhotspots.org database (ClinGen/CGC/VICC 2022: OS3). Functional studies support an oncogenic effect for this variant (ClinGen/CGC/VICC 2022: OS2). This variant has not been identified in control populations (or at an extremely low minor allele frequency) within gnomAD, a large-scale population database (ClinGen/CGC/VICC 2022: OP4). In silico algorithms suggest that this variant has an oncogenic effect on the gene product (ClinGen/CGC/VICC 2022: OP1)."
       },
       "observedIn": [
         {
@@ -20,27 +20,21 @@
         "variant": [
           {
             "chromosomeCoordinates": {
-              "accession": "NC_000022.11",
+              "accession": "NC_000001.11",
               "alternateAllele": "T",
               "assembly": "GRCh38",
-              "chromosome": "22",
-              "referenceAllele": "C",
-              "start": 29642211,
-              "stop": 29642211
-            },
-            "gene": [
-              {
-                "id": 4771
-              }
-            ]
+              "chromosome": "1",
+              "referenceAllele": "G",
+              "start": 114713909,
+              "stop": 114713909
+            }
           }
         ]
       },
       "conditionSet": {
         "condition": [
           {
-            "db": "MONDO",
-            "id": "0002546"
+            "name": "Diffuse Midline Glioma"
           }
         ]
       }
