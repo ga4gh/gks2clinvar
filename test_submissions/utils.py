@@ -35,11 +35,12 @@ if __name__ == "__main__":
     import json
     from pathlib import Path
 
-    for json_f in Path().glob("*.json"):
-        with json_f.open() as rf:
-            sub_data = json.loads(rf.read())
-            response = dry_run_test_api(sub_data)
-            if response.status_code != 204:
-                print(f"{json_f} is invalid: {response.json()}")  # noqa: T201
-            else:
-                print(f"{json_f} is valid")  # noqa: T201
+    for source in {"civic", "varcat"}:
+        for json_f in Path(source).glob("*.json"):
+            with json_f.open() as rf:
+                sub_data = json.loads(rf.read())
+                response = dry_run_test_api(sub_data)
+                if response.status_code != 204:
+                    print(f"{json_f} is invalid: {response.json()}")  # noqa: T201
+                else:
+                    print(f"{json_f} is valid")  # noqa: T201
