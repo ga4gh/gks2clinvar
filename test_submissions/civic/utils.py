@@ -35,7 +35,9 @@ if __name__ == "__main__":
     import json
     from pathlib import Path
 
-    for json_f in Path().glob("*.json"):
+    root_dir = Path(__file__).resolve().parents[0]
+
+    for json_f in root_dir.glob("*.json"):
         with json_f.open() as rf:
             sub_data = json.loads(rf.read())
             response = dry_run_test_api(sub_data)
