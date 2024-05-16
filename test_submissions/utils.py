@@ -31,12 +31,25 @@ def dry_run_test_api(submission: list[dict]) -> requests.Response:
     )
 
 
+def test_api_sub_actions(submission_id: str) -> requests.Response:
+    """Get submission status
+
+    :param submission_id: Submission ID retrieved when the submission was created
+    :return: Response from ClinVar Submission Test API
+    """
+    return requests.get(
+        f"{TEST_URL}/{submission_id}/actions/", headers=HEADERS, timeout=5
+    )
+
+
 if __name__ == "__main__":
     import json
     from pathlib import Path
 
+    root_dir = Path(__file__).resolve().parents[0]
+
     for source in {"civic", "varcat"}:
-        for json_f in Path(source).glob("*.json"):
+        for json_f in Path(root_dir / source).glob("*.json"):
             with json_f.open() as rf:
                 sub_data = json.loads(rf.read())
                 response = dry_run_test_api(sub_data)
