@@ -31,6 +31,17 @@ def dry_run_test_api(submission: list[dict]) -> requests.Response:
     )
 
 
+def test_api_sub_actions(submission_id: str) -> requests.Response:
+    """Get submission status
+
+    :param submission_id: Submission ID retrieved when the submission was created
+    :return: Response from ClinVar Submission Test API
+    """
+    return requests.get(
+        f"{TEST_URL}/{submission_id}/actions/", headers=HEADERS, timeout=5
+    )
+
+
 if __name__ == "__main__":
     import json
     from pathlib import Path
