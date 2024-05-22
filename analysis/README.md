@@ -9,6 +9,30 @@ submitted compared to spreadsheet submission.
   * For example, `Variant: variation identifiers, alternate designations, URL` are found
     in the spreadsheet submission, but cannot be submitted via Submission API.
 
+### Validation
+
+The [validation notebook](./validation.ipynb) contains invalid submissions to evaluate
+how the ClinVar Submission API handles validation. Submissions fail when JSON Schema
+validation fails. The ClinVar Submission API does not appear to do data validation.
+
+JSON Schema validation errors are formatted as:
+
+```json
+{
+  "message": "Validation failed, see errors for detailed description",
+  "errors": [
+    {
+      "message": ERROR_MESSAGE,
+      "code": null,
+      "identifier": null
+    },
+    ...
+  ]
+}
+```
+
+We have not run into instances where code and identifier are not null.
+
 ## CIViC
 
 The [civic](./civic/) directory contains CIViC evidence items and assertions that were
