@@ -10,8 +10,24 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+CLINVAR_API = "https://submit.ncbi.nlm.nih.gov/api/v1/submissions/"
 TEST_URL = "https://submit.ncbi.nlm.nih.gov/apitest/v1/submissions"
 HEADERS = {"Content-type": "application/json", "SP-API-KEY": environ["CLINVAR_API_KEY"]}
+
+
+def submit(submission: list[dict]) -> requests.Response:
+    """Create submission via ClinVar Submission API
+
+    :param submission: ClinVar submission
+    :return: Response from ClinVar Submission API
+    """
+    payload = {
+        "actions": [
+            {"type": "AddData", "targetDb": "clinvar", "data": {"content": submission}}
+        ]
+    }
+
+    return requests.post(CLINVAR_API, headers=HEADERS, json=payload, timeout=5)
 
 
 def dry_run_test_api(submission: list[dict]) -> requests.Response:
