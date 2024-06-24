@@ -1,4 +1,8 @@
 {
+  "assertionCriteria": {
+    "db": "PubMed",
+    "id": " 27993330"
+  },
   "clinicalImpactSubmission": [
     {
       "recordStatus": "novel",
