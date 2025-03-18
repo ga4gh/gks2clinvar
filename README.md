@@ -1,6 +1,6 @@
-# GKS-ClinVar
+# GKS-ClinVar Analysis
 
-A submission tool for submitting to the ClinVar Submission API using [GA4GH Genomic
+An analysis for submitting to the ClinVar Submission API using [GA4GH Genomic
 Knowledge Standards](https://www.ga4gh.org/work_stream/genomic-knowledge-standards/)
 (GKS) data.
 
@@ -8,10 +8,12 @@ Development of a shared, open-source software package for managing these submiss
 that can be easily configured for use by multiple submitters would be highly impactful
 as development and adoption of the GKS framework grows.
 
+**The work for this tool can be found at <https://github.com/clingen-data-model/clinvar-this>.**
+
 ![image](./misc/images/GKS-ClinVar%20submission%20overview.png)
 
 We plan to contribute to [ClinVar This](https://github.com/varfish-org/clinvar-this) to
-support GKS data stored as [JSON Lines](https://jsonlines.org/) files.
+support GKS data stored as JSON files.
 
 ## ClinVar Submission API
 
