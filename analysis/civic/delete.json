@@ -1,0 +1,10 @@
+{
+  "clinvarDeletion": {
+    "accessionSet": [
+      {
+        "accession": "SCV005041374",
+        "reason": "Delete civic.eid:2997 as a test"
+      }
+    ]
+  }
+}
